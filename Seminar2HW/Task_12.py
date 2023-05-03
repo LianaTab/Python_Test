@@ -4,3 +4,28 @@
 # а Катя должна их отгадать. Для этого Петя делает две подсказки. 
 # Он называет сумму этих чисел S и их произведение P. 
 # Помогите Кате отгадать задуманные Петей числа.
+
+'''
+from math import sqrt
+s = int(inpit())
+p = int(inpit())
+
+if s**2-4*p < 0:
+    print("No real valued solutions exist")
+else:
+    #y = int((s**0,5(s**2-4*p))/2)
+    y = int((s+sqrt(s**2-4*p))/2)
+    print(s-y, y)
+'''
+
+summa = int(input("Введите сумму чисел: "))
+product = int(input("Введите произведение чисел: "))
+i = 0
+j = 0
+for i in range(1001):
+    for j in range(1001):
+        if ((i+j)== summa and (i*j)==product):
+            print(f"Это числа {i} и {j}")
+            quit()
+print("Нет таких целых чисел")
+
